@@ -1,4 +1,4 @@
-Created a directory
+# Created a directory
 
 ...
     mkdir 01helloWorld
@@ -6,8 +6,8 @@ Created a directory
     go mod init demo
 ...
 
-- Explanation - the name demo is the name of the go module
-- Ultimately this name demo becomes the virtual root path of the project
+# Explanation - the name demo is the name of the go module
+# Ultimately this name demo becomes the virtual root path of the project
 
     go run main.go
 
@@ -29,3 +29,12 @@ To cross Compile
         // darwin/amd64
         // darwin/arm64
     GOOS=darwin && GOARCH=arm64 go build -o macapp main.go
+
+
+- Git Commands
+
+    git init
+    git add ...
+    git commit -m "commit messgae"
+    git branch -M main
+    git push origin main    (for force push:   git push -f origin main)
