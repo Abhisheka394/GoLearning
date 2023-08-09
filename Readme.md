@@ -1,0 +1,2 @@
+# sickterm - Graceful termination
+# sickKill -  
