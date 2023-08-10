@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
 // Conditions
 // State : Karnataka , AP, Delhi ,UP Gender: M,F Age: >0 Height:
 
@@ -15,9 +20,36 @@ package main
 // Other than the above table ,It is a full ticket
 
 func main() {
-
+	decideTicket("AP", "F", 140, 14)
+	decideTicket("UP", "F", 108, 4)
+	decideTicket("Karnataka", "F", 140, 14)
+	decideTicket("Delhi", "F", 140, 14)
+	decideTicket("Karnataka", "M", 140, 14)
+	decideTicket("Delhi", "M", 90, 4)
+	decideTicket("UP", "M", 140, 14)
+	decideTicket("AP", "M", 110, 6)
 }
 
 func decideTicket(state string, gender string, height int, age int) {
-
+	fmt.Println("State:", state, "gender:", gender, "height: ", height, "age: ", age)
+	switch {
+	case strings.ToLower(state) == "karnataka" && gender == "F":
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "delhi" && gender == "F":
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "ap" && gender == "F" && height < 110 && age < 5:
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "up" && gender == "F" && height < 120 && age < 6:
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "karnataka" && gender == "M" && height < 110 && age < 5:
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "delhi" && gender == "M" && height < 110 && age < 7:
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "ap" && gender == "M" && height < 130 && age < 5:
+		fmt.Println("No Ticket")
+	case strings.ToLower(state) == "up" && gender == "M" && height < 120 && age < 6:
+		fmt.Println("No Ticket")
+	default:
+		fmt.Println("Full Ticket")
+	}
 }

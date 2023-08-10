@@ -22,3 +22,4 @@
     8. Switch 
     9. In a given array find the biggest and smallest number , write a function get big and small and return big and small.
     
+    given an array transpose it,   take a 2d array 
